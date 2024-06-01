@@ -40,7 +40,7 @@ const DailyPhoto: React.FC<DailyPhotoProps> = ({
       <div>
         {isVideo ? (
           <iframe
-            className="aspect-square w-[50%] flex-1 shadow-xl border-[0.35rem] rounded-xl"
+            className="aspect-square w-full h-full flex-1 shadow-xl border-[0.35rem] rounded-xl"
             src={url}
             title={title}
             allowFullScreen
