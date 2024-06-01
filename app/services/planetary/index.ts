@@ -9,12 +9,22 @@ export const planetaryApi = axios.create({
 
 export const fetchApod = async (date?: string) => {
   try {
-    const response = await planetaryApi.get("/apod", {
-      params: { date },
-    });
+    const response = await planetaryApi.get("/apod", { params: { date } });
+
+    if (response.status !== 200)
+      throw new Error("Invalid response from server");
+
     return response.data;
   } catch (error) {
-    console.error("Failed to fetch APOD:", error);
+    let errorMessage = "Failed to fetch APOD. Please try again later.";
+
+    if (error) {
+      errorMessage = `Failed to fetch APOD: ${error}`;
+    } else if (error) {
+      errorMessage = "Failed to fetch APOD: No response from server";
+    }
+
+    console.error(errorMessage);
     return null;
   }
 };

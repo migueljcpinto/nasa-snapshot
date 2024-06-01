@@ -20,14 +20,14 @@ const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
 
   return (
     <>
-      <div className=" lg:flex flex-col hidden space-y-2  justify-center items-center">
+      {/* <div className=" lg:flex flex-col hidden space-y-2  justify-center items-center">
         <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-slate-400">
           Welcome, Cosmos Explorers!
         </h2>
         <p className="mt-2 text-lg text-center text-slate-500 dark:text-slate-300">
           Discover the photo that was taken today!
         </p>
-      </div>
+      </div> */}
       <form onSubmit={handleSubmit} className="flex justify-center mt-8">
         <PhotoDatePicker date={date} setDate={setDate} />
         <Button variant="outline" type="submit">
