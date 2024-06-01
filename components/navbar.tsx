@@ -18,14 +18,6 @@ const Navbar = () => {
         <Image src="/NasaPhoto.png" alt="logo" width={95} height={50} />
       </Link>
 
-      <div className="lg:flex hidden mx-auto flex-col">
-        <span className="text-3xl font-bold text-slate-800 dark:text-slate-500">
-          Welcome, Cosmos Explorers!
-        </span>
-        <p className="mt-2 text-lg text-slate-600 dark:text-slate-300">
-          Discover the photo that was taken today!
-        </p>
-      </div>
       <Sheet>
         <SheetTrigger>
           <Image
@@ -41,19 +33,20 @@ const Navbar = () => {
             <Image src="/NasaPhoto.png" alt="logo" width={105} height={60} />
           </SheetHeader>
 
-          <div className=" flex justify-center items-center">
-            <Button type="button" title="Contact me" variant="default">
-              <Link href="https://mikebitedev.vercel.app">Contact me</Link>
-            </Button>
+          <div className=" flex flex-col space-y-10 justify-center items-center mb-8">
+            <h2 className="text-3xl font-bold text-center text-slate-900 dark:text-slate-400">
+              Welcome, Cosmos Explorers!
+            </h2>
+            <p className="mt-2 text-lg text-center text-slate-500 dark:text-slate-300">
+              Discover the photo that was taken today!
+            </p>
           </div>
+
+          <Button type="button" title="Contact me" variant="default">
+            <Link href="https://mikebitedev.vercel.app">Contact me</Link>
+          </Button>
         </SheetContent>
       </Sheet>
-
-      <div className="lg:flex hidden">
-        <Button type="button" title="Contact me" variant="default">
-          <Link href="https://mikebitedev.vercel.app">Contact me</Link>
-        </Button>
-      </div>
     </nav>
   );
 };
