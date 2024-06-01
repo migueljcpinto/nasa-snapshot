@@ -1,5 +1,5 @@
 import { useState, useEffect, useCallback } from "react";
-import { fetchApod } from "../api/planetary/route";
+import { fetchApod } from "../services/planetary";
 
 interface ApodData {
   title: string;
