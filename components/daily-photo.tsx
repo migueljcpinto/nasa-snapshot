@@ -11,15 +11,7 @@ import { PhotoExplanation } from "./photo-explanation";
 import { PhotoCard } from "./photo-card";
 import { format } from "date-fns";
 import { enUS } from "date-fns/locale";
-
-interface DailyPhotoProps {
-  title: string;
-  url: string;
-  explanation: string;
-  date: string;
-  type: string;
-  author: string;
-}
+import { DailyPhotoProps } from "@/lib/types";
 
 const DailyPhoto: React.FC<DailyPhotoProps> = ({
   title,

@@ -12,11 +12,7 @@ import {
   PopoverContent,
   PopoverTrigger,
 } from "@/components/ui/popover";
-
-interface PhotoDatePickerProps {
-  date: Date | null;
-  setDate: (date: Date | null) => void;
-}
+import { PhotoDatePickerProps } from "@/lib/types";
 
 export const PhotoDatePicker: React.FC<PhotoDatePickerProps> = ({
   date,

@@ -1,14 +1,6 @@
 import { useState, useEffect, useCallback } from "react";
 import { fetchApod } from "../services/planetary";
-
-interface ApodData {
-  title: string;
-  url: string;
-  explanation: string;
-  date: string;
-  media_type: string;
-  copyright: string;
-}
+import { ApodData } from "@/lib/types";
 
 const useApodData = (initialDate?: string) => {
   const [apod, setApod] = useState<ApodData | null>(null);

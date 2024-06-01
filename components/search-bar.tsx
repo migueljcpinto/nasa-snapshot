@@ -3,10 +3,7 @@ import React, { useState } from "react";
 import { PhotoDatePicker } from "./photo-date-picker";
 import { Button } from "./ui/button";
 import { IoSearchOutline } from "react-icons/io5";
-
-interface SearchBarProps {
-  onSearch: (date: string) => void;
-}
+import { SearchBarProps } from "@/lib/types";
 
 const SearchBar: React.FC<SearchBarProps> = ({ onSearch }) => {
   const [date, setDate] = useState<Date | null>(null);

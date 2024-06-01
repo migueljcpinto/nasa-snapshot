@@ -6,14 +6,7 @@ import Image from "next/image";
 import { cn } from "@/utils/cn";
 import Link from "next/link";
 import { MdOpenInNew } from "react-icons/md";
-
-interface PhotoData {
-  title: string;
-  url: string;
-  date: string;
-  copyright: string;
-  media_type: string;
-}
+import { PhotoData } from "@/lib/types";
 
 export const ParallaxScroll = ({
   images,

@@ -1,20 +1,7 @@
 "use client";
+import { ParallaxGalleryProps } from "@/lib/types";
 import { ParallaxScroll } from "./ui/parallax-scroll";
 import useInfiniteScroll from "@/app/hooks/useInfiniteScroll";
-
-interface PhotoData {
-  title: string;
-  url: string;
-  date: string;
-  copyright: string;
-  media_type: string;
-}
-
-interface ParallaxGalleryProps {
-  images: PhotoData[];
-  fetchMoreData: () => void;
-  loading: boolean;
-}
 
 export function ParallaxGallery({
   images,

@@ -3,13 +3,7 @@
 import { MdOpenInNew } from "react-icons/md";
 import { DirectionAwareHover } from "./ui/direction-aware-hover";
 import Link from "next/link";
-
-interface PhotoCardProps {
-  imageUrl: string;
-  date: string;
-  title: string;
-  author: string;
-}
+import { PhotoCardProps } from "@/lib/types";
 
 export function PhotoCard({ imageUrl, date, title, author }: PhotoCardProps) {
   return (
